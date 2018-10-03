@@ -53,7 +53,7 @@ body {
 
 /* NAVBAR */
 .navbar-fixed-left .container { /*A*/
-	position: absolute;
+    position: absolute;
     margin-top: 0px;        
     width: auto;
     padding-right: 0px;
