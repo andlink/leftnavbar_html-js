@@ -16,36 +16,36 @@ Get the full text of the GPL here: http://www.gnu.org/licenses/gpl.txt
 --------------------------------------------------------------------------------- */
 
 function move_resize() {
-	var top = $('.navbar-fixed-left').offset().top;
-	var margin = -1 * $(".header").height();
-	if(top - $(window).scrollTop() < 0 ) {
-		$(".container").css("position", "fixed");   
-		$(".container").css("margin-top", margin);
-		$(".container").css("background", "black");
-		if ($(".sr-only").is(":visible")) {
-			$(".container").css("width", "100%");
-			$(".container").css("padding-right", "20px");                    
-			$(".cont-right").css("z-index", "1");    
-			$(".cont-left").css("z-index", "9999");    
-		} else {
-			$(".container").css("width", "auto");
-			$(".container").css("padding-right", "0px");
-			$(".cont-right").css("z-index", "9999");    
-			$(".cont-left").css("z-index", "1");    
-		}
-	} else {            
-		$(".container").css("margin-top", 0);                           
-		$(".container").css("padding-right", "0px");     
-		if ($(".sr-only").is(":visible")) {
-			$(".container").css("position", "relative");
-			$(".container").css("width", "100%");
-			$(".container").css("padding-right", "20px");    
-		} else {
-			$(".container").css("position", "absolute");
-			$(".container").css("width", "auto");
-			$(".container").css("padding-right", "0px");
-		}        
-	}
+    var top = $('.navbar-fixed-left').offset().top;
+    var margin = -1 * $(".cont-header").height();
+    if(top - $(window).scrollTop() < 0 ) {
+        $(".container").css("position", "fixed");   
+        $(".container").css("margin-top", margin);
+        $(".container").css("background", "black");
+        if ($(".sr-only").is(":visible")) {
+            $(".container").css("width", "100%");
+            $(".container").css("padding-right", "20px");                    
+            $(".cont-right").css("z-index", "1");    
+            $(".cont-left").css("z-index", "9999");    
+        } else {
+            $(".container").css("width", "auto");
+            $(".container").css("padding-right", "0px");
+            $(".cont-right").css("z-index", "9999");    
+            $(".cont-left").css("z-index", "1");    
+        }
+    } else {            
+        $(".container").css("margin-top", 0);                           
+        $(".container").css("padding-right", "0px");     
+        if ($(".sr-only").is(":visible")) {
+            $(".container").css("position", "relative");
+            $(".container").css("width", "100%");
+            $(".container").css("padding-right", "20px");    
+        } else {
+            $(".container").css("position", "absolute");
+            $(".container").css("width", "auto");
+            $(".container").css("padding-right", "0px");
+        }        
+    }
 }
 
 $(window).scroll(function() { move_resize(); });  
