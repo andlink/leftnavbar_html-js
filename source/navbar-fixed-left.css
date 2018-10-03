@@ -70,6 +70,7 @@ body {
     }
     .navbar-fixed-left { 
         margin: 0;
+	border: 0;
     }     	
 }
 @media (min-width: 768px) {
